@@ -16,9 +16,9 @@ public class CustomerServiceImpl implements CustomerService {
     private final CustomerValidationService customerValidationService;
     private final ModelMapper modelMapper;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository, CustomerValidationService customerValidationService,ObjectMapper objectMapper) {
+    public CustomerServiceImpl(CustomerRepository customerRepository, CustomerValidationService customerValidationService,ModelMapper modelMapper) {
         this.customerRepository = customerRepository;
-        this.modelMapper = new ModelMapper();
+        this.modelMapper = modelMapper;
         this.customerValidationService = customerValidationService;
     }
     @Transactional
