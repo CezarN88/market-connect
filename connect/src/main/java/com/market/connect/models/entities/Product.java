@@ -3,11 +3,13 @@ package com.market.connect.models.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Data
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -38,4 +40,6 @@ public class Product {
     @Column(name = "product_description")
     private String productDescription;
 
+    @ManyToMany(mappedBy = "products")
+    private List<Order> orders = new ArrayList<>();
 }
