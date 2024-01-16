@@ -1,6 +1,5 @@
 package com.market.connect.services;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.market.connect.models.dtos.CustomerDTO;
 import com.market.connect.models.entities.Customer;
 import com.market.connect.repositories.CustomerRepository;
